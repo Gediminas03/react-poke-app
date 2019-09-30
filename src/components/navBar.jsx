@@ -10,9 +10,6 @@ const NavBar = () => {
       <Link to="/components/pokeList">
         <li>List</li>
       </Link>
-      <Link to="/components/pokeInfo">
-        <li>Info</li>
-      </Link>
     </nav>
   );
 };

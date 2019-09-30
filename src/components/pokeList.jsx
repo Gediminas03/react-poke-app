@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function PokeList() {
@@ -19,7 +19,9 @@ function PokeList() {
   return (
     <div>
       {pokemons.map(item => (
-        <h6 key={item.name}>{item.name}</h6>
+        <h6 key={item.name}>
+          <Link to={`/components/pokeList/${item.name}`}>{item.name}</Link>
+        </h6>
       ))}
     </div>
   );
