@@ -5,12 +5,12 @@ const NavBar = () => {
   return (
     <nav className="navbar bg-dark">
       <span>
-        <a style={{ margin: "10px" }}>
-          <Link to="/">Home</Link>
-        </a>
-        <a a style={{ margin: "10px" }}>
-          <Link to="/components/pokeList">Pokemons</Link>
-        </a>
+        <Link to="/" style={{ margin: "10px" }}>
+          Home
+        </Link>
+        <Link to="/components/pokeList" style={{ margin: "10px" }}>
+          Pokémons
+        </Link>
       </span>
     </nav>
   );

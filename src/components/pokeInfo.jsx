@@ -24,7 +24,7 @@ function PokeInfo({ match }) {
       <span style={{ margin: "20px" }}>
         <h1 style={{ textTransform: "capitalize" }}>
           {" "}
-          <img src={pokemon.sprites.front_default} /> {pokemon.name}
+          <img src={pokemon.sprites.front_default} alt="" /> {pokemon.name}
         </h1>
       </span>
       <h4 style={{ margin: "20px" }}>Types</h4>

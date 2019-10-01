@@ -12,9 +12,9 @@ const Home = () => {
         alt="..."
       ></img>
       <div className="card-body">
-        <h1 className="card-title">PokeApp</h1>
+        <h1 className="card-title">PokéApp</h1>
         <h4>Welcome</h4>
-        <p className="card-text">Find pokemons and see their attributes.</p>
+        <p className="card-text">Find pokémons and see their attributes.</p>
         <h5>Gotta Catch 'Em All!</h5>
         <Link to="/components/pokeList">
           <button className="btn btn-primary" style={{ margin: "20px" }}>
