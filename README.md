@@ -6,6 +6,8 @@ Pokémon API provided by https://pokeapi.co
 
 ## Screenshots
 
+![](screenshots/Screenshot_20191001_180704_org.mozilla.firefox.jpg) ![](screenshots/Screenshot_20191001_180712_org.mozilla.firefox.jpg) ![](screenshots/Screenshot_20191001_180722_org.mozilla.firefox.jpg) ![](screenshots/Screenshot_20191001_180734_org.mozilla.firefox.jpg)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
