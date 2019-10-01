@@ -1,5 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 
 function PokeInfo({ match }) {
   useEffect(() => {
@@ -22,16 +21,24 @@ function PokeInfo({ match }) {
 
   return (
     <div>
-      <img src={pokemon.sprites.front_default} />
-      <h1>{pokemon.name}</h1>
-      <h1>Types</h1>
-      {pokemon.types.map(type => (
-        <p key={type.type.name}>{type.type.name}</p>
-      ))}
-      <h1>Moves</h1>
-      {pokemon.moves.map(move => (
-        <li key={move.move.name}>{move.move.name}</li>
-      ))}
+      <span style={{ margin: "20px" }}>
+        <h1 style={{ textTransform: "capitalize" }}>
+          {" "}
+          <img src={pokemon.sprites.front_default} /> {pokemon.name}
+        </h1>
+      </span>
+      <h4 style={{ margin: "20px" }}>Types</h4>
+      <span className="badge badge-light" style={{ textAlign: "left" }}>
+        {pokemon.types.map(type => (
+          <li key={type.type.name}>{type.type.name}</li>
+        ))}
+      </span>
+      <h4 style={{ margin: "20px" }}>Moves</h4>
+      <span className="badge badge-light" style={{ textAlign: "left" }}>
+        {pokemon.moves.map(move => (
+          <li key={move.move.name}>{move.move.name}</li>
+        ))}
+      </span>
     </div>
   );
 }

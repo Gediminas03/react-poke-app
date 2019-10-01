@@ -7,10 +7,11 @@ function PokeList() {
   }, []);
 
   const [pokemons, setPokemons] = useState([]);
+  const [name, setName] = useState("");
 
   const pokeData = async () => {
     const data = await fetch(
-      "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20"
+      "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1000"
     );
     const pokemons = await data.json();
     setPokemons(pokemons.results);
@@ -18,11 +19,27 @@ function PokeList() {
 
   return (
     <div>
-      {pokemons.map(item => (
-        <h6 key={item.name}>
-          <Link to={`/components/pokeList/${item.name}`}>{item.name}</Link>
-        </h6>
-      ))}
+      <form>
+        <input
+          className="form-control"
+          placeholder="Filter By Name"
+          onChange={name => setName(name.target.value.toLowerCase())}
+        />
+      </form>
+      {pokemons
+        .filter(pokemon => pokemon.name.includes(`${name}`))
+        .slice(0, 500)
+        .map(pokemon => (
+          <span
+            key={pokemon.name}
+            className="badge badge-light m-2"
+            style={{ textTransform: "capitalize" }}
+          >
+            <Link to={`/components/pokeList/${pokemon.name}`}>
+              {pokemon.name}
+            </Link>
+          </span>
+        ))}
     </div>
   );
 }
